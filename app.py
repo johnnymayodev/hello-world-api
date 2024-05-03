@@ -3,6 +3,7 @@ import time
 from flask import Flask, jsonify # type: ignore
 
 VERSION = 1
+PATH = f"/api/V{VERSION}"
 
 # Colors for the console
 WHITE = "\033[0m"
@@ -48,7 +49,7 @@ time.sleep(1)
 app = Flask(__name__)
 
 
-@app.route(f"/V{VERSION}/hello", methods=["GET"])
+@app.route(f"{PATH}/hello", methods=["GET"])
 def hello():
     return jsonify({"message": "Hello, World!"})
 
