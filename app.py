@@ -1,6 +1,6 @@
 import sys
 import time
-from flask import Flask, jsonify # type: ignore
+from flask import Flask, jsonify  # type: ignore
 
 VERSION = 1
 PATH = f"/api/V{VERSION}"
@@ -28,7 +28,7 @@ valid_args = ["--debug", "--port"]
 args = sys.argv
 if len(args) > 1:  # Check if there are any arguments
     for arg in valid_args:  # Check if the arguments are valid
-        if arg in args: # If the argument is in the list of arguments
+        if arg in args:  # If the argument is in the list of arguments
             if arg == "--debug":
                 DEBUG = True
                 print(f"{GREEN}Debug mode enabled{WHITE}")
@@ -47,6 +47,11 @@ print(f"{YELLOW}Starting Flask Server...{WHITE}")
 time.sleep(1)
 
 app = Flask(__name__)
+
+
+@app.route("/", methods=["GET"])
+def index():
+    return "<a href='./api/V1/hello'>API</a>"
 
 
 @app.route(f"{PATH}/hello", methods=["GET"])
