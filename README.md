@@ -10,7 +10,7 @@ This is a simple API that returns a hello world message.
 
 Please feel free to fork this repo and contribute by submitting a pull request to enhance the functionalities.
 
-##### [GitHub's Contributing to a Project Guide](https://docs.github.com/en/get-started/exploring-projects-on-github/contributing-to-a-project)
+#### <a href="https://docs.github.com/en/get-started/exploring-projects-on-github/contributing-to-a-project" target="_blank">GitHub's Contributing to a Project Guide</a>
 
 ## How to run
 
