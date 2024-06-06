@@ -10,7 +10,7 @@ Command Line Arguments:
 """
 
 DEBUG = False if "--debug" not in sys.argv else True
-PORT = 5000 if "--port" not in sys.argv else sys.argv[sys.argv.index("--port") + 1]
+PORT = 5000 if "--port" not in sys.argv else int(sys.argv[sys.argv.index("--port") + 1])
 VERSION = (
     1 if "--version" not in sys.argv else sys.argv[sys.argv.index("--version") + 1]
 )
